@@ -79,7 +79,7 @@
   <li><strong>Alliance text.</strong> Alliance names, tags and announcements you write as a leader or officer.</li>
   <li><strong>Reports about other players.</strong> If you report a message, a player's profile or an Alliance's public text, we store the reason you chose, any note you add, a snapshot of the reported message and the players' names at that moment, up to five nearby messages from the same chat (only a chat you could already read), your World and Season, and the game version and platform name, so a moderator can review it. The reported player is never told who reported them.</li>
   <li><strong>Bug and cheating reports.</strong> If you send a report from <span class="ui">Settings</span> &rsaquo; <span class="ui">SUPPORT</span>, we store your description, the category you chose, any player name you mention, the game version, platform name, device model and operating-system version shown on the form, and which screen you sent it from. Please don't include passwords, restore codes or payment details; the server removes text that looks like a sign-in token.</li>
-  <li><strong>Chat settings.</strong> Your preferred chat language, whether Auto Translate is on, and your profanity-filter setting.</li>
+  <li><strong>Chat settings.</strong> Your chat language, whether Auto-Translate is on, and your profanity-filter setting.</li>
 </ul>
 <h3>2.4 Technical and diagnostic information</h3>
 <ul>
@@ -109,7 +109,7 @@
 <p><strong>Service providers</strong> that process data on our behalf:</p>
 <ul>
   <li><strong>Hosting:</strong> our game server and database run on a cloud server we rent from a hosting provider.</li>
-  <li><strong>Chat translation (Google Cloud Translation, by Google):</strong> only when chat translation is switched on for the game server. When a player asks for a message to be translated (by tapping translate or by turning on Auto Translate), our server sends <strong>only the message text and the language to translate into</strong> to Google Cloud Translation, and stores the translation on our server so the same message isn't translated twice. We don't send Google your player ID, your name or your IP address. Google processes this text under its Google Cloud terms. The game app itself never contacts Google for translation.</li>
+  <li><strong>Chat translation (Google Cloud Translation, by Google):</strong> players can translate chat into one of 12 languages (English, Spanish, French, German, Portuguese, Italian, Polish, Turkish, Russian, Japanese, Korean and Chinese (Simplified)). When a player taps <span class="ui">TRANSLATE</span> on a message, or has <span class="ui">AUTO-TRANSLATE</span> turned on, our server sends <strong>only the message text and the language to translate into</strong> to Google Cloud Translation. We don't send Google your player ID, your name, your IP address or any other account data, and the game app itself never contacts Google. Removed messages, Alliance system notices and messages from players you muted or blocked are never sent. Our server keeps each translation for <strong>up to 90 days</strong> so the same message isn't translated twice, and deletes it sooner if the message is removed or its author deletes their account. Google processes the text as our service provider under its Google Cloud terms. If translation is unavailable, chat keeps working and you see the original text.</li>
   <li><strong>Game engine:</strong> Unity Technologies, for the engine diagnostics described in section 2.4.</li>
 </ul>
 <p><strong>Legal reasons:</strong> we may disclose information if the law requires it, or to protect players, the game or others.</p>
@@ -123,10 +123,12 @@
 <tr><td data-label="Data">Chat messages and private messages</td><td data-label="How long"><strong>No fixed end date.</strong> They are kept as part of the shared chat history, including after you delete your account (your name is replaced with &ldquo;Deleted Player&rdquo;). Messages removed by a moderator are hidden from players but kept in our records.</td></tr>
 <tr><td data-label="Data">Battle and Scout reports, Season and League results</td><td data-label="How long">No fixed end date (game history). Your name is replaced with &ldquo;Deleted Player&rdquo; if you delete your account.</td></tr>
 <tr><td data-label="Data">Cities, Marches and map items of a finished Season's World</td><td data-label="How long">Deleted about 30 days after that Season ends.</td></tr>
+<tr><td data-label="Data">A deleted account's starter area</td><td data-label="How long">Freed for new players when the account is deleted, if nothing else in the World depends on it (section 6). Otherwise as above.</td></tr>
 <tr><td data-label="Data">Gameplay analytics</td><td data-label="How long">90 days.</td></tr>
 <tr><td data-label="Data">Expired sign-in sessions</td><td data-label="How long">About 30 days after they expire.</td></tr>
 <tr><td data-label="Data">Reports about abuse, bugs and cheating, and moderation records</td><td data-label="How long">No fixed end date at present.</td></tr>
-<tr><td data-label="Data">Translated copies of chat messages</td><td data-label="How long">No fixed end date at present.</td></tr>
+<tr><td data-label="Data">Translated copies of chat messages</td><td data-label="How long">Up to 90 days. Deleted sooner if the message is removed or its author deletes their account.</td></tr>
+<tr><td data-label="Data">Chat settings (chat language, Auto-Translate, profanity filter)</td><td data-label="How long">While your account exists. Deleted with your account.</td></tr>
 <tr><td data-label="Data">Server backups</td><td data-label="How long">Until the backup is deleted. There is no fixed schedule yet.</td></tr>
 <tr><td data-label="Data">Server logs</td><td data-label="How long">A limited time, until the logs rotate and are overwritten.</td></tr>
 </tbody>
@@ -140,13 +142,14 @@
   <li>It can never sign in again. All sessions end and unused restore codes stop working.</li>
   <li>Your display name becomes &ldquo;Deleted Player&rdquo; everywhere it appears, including chat history, Alliance notices, reports, rankings history, Season results and city names that were based on your name. Your former names become available to other players.</li>
   <li>Your Alliance place is released, stored device labels are deleted, and your analytics activity records are deleted or unlinked from your player ID.</li>
-  <li>Your own mute and block lists are deleted, and the device model and operating-system version are removed from any bug or cheating reports you sent.</li>
+  <li>Your own mute and block lists and your chat settings (chat language, Auto-Translate, profanity filter) are deleted, translations of your messages are deleted, and the device model and operating-system version are removed from any bug or cheating reports you sent.</li>
+  <li>Your starter area is freed for new players if nothing else in the World depends on it: the only land you hold is your Main City and your five starter cities, and no other player's March or safety report involves it. Your own Marches to or from that area are removed with it. Land you gave up earlier with Fresh Start has already become public neutral land and stays that way.</li>
 </ul>
 <p>Some information is <strong>kept</strong> after deletion. It no longer carries your name and is no longer linked to any way of signing in, so it can't be used or restored by you or anyone else:</p>
 <ul>
-  <li><strong>Game records, with no fixed end date:</strong> your account and player ID (random identifiers), Gear, Runes, chests, Crowns and other items, quest progress, Inbox mail, League profile, friend list, chat settings, your Terms acceptance record, and promo codes you redeemed. Other players' mute and block lists that include you are their own settings and stay.</li>
-  <li><strong>Shared World records:</strong> cities you owned may stay on the map until that Season's World is cleaned up (about 30 days after the Season ends); battle and Scout reports and Season results remain for the other players involved, with no fixed end date.</li>
-  <li><strong>Messages:</strong> <strong>the text of chat and private messages you sent stays</strong> (shown as &ldquo;Deleted Player&rdquo;), with no fixed end date. Translated copies made for other players are also kept, with no fixed end date at present.</li>
+  <li><strong>Game records, with no fixed end date:</strong> your account and player ID (random identifiers), Gear, Runes, chests, Crowns and other items, quest progress, Inbox mail, League profile, friend list, your Terms acceptance record, and promo codes you redeemed. Other players' mute and block lists that include you are their own settings and stay.</li>
+  <li><strong>Shared World records:</strong> if your starter area can't be freed (for example, because you captured other cities, or another player's March or safety report involves it), your cities stay on the map without your name until that Season's World is cleaned up (about 30 days after the Season ends); battle and Scout reports and Season results remain for the other players involved, with no fixed end date.</li>
+  <li><strong>Messages:</strong> <strong>the text of chat and private messages you sent stays</strong> (shown as &ldquo;Deleted Player&rdquo;), with no fixed end date. Translations of your messages are deleted.</li>
   <li><strong>Safety records:</strong> reports about abuse, bugs and cheating (including the reported message and its nearby messages) are kept with no fixed end date at present.</li>
   <li><strong>Backups and logs:</strong> copies may remain in server backups until those backups are deleted, and in server logs until they rotate.</li>
 </ul>
@@ -156,13 +159,13 @@
 
 <h2 id="rights">8. Your choices and rights</h2>
 <ul>
-  <li>Change your display name in your Profile. Turn Auto Translate and the profanity filter on or off in <span class="ui">Settings</span>. Mute or block players, and report abusive messages or names.</li>
+  <li>Change your display name in your Profile. Choose your chat language and turn Auto-Translate and the profanity filter on or off in <span class="ui">Settings</span>. Mute or block players, and report abusive messages or names.</li>
   <li>Delete your account at any time (section 6).</li>
   <li>Depending on where you live, you may have the right to access, correct, delete or receive a copy of your personal data, to object to or restrict some uses, and to complain to your local data-protection authority. To make a request, email <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20privacy%20request">reignofrivals@gmail.com</a> with your exact player name. We may ask for details that help us confirm the account is yours.</li>
 </ul>
 
 <h2 id="children">9. Children</h2>
-<p>Reign of Rivals is not directed at children. You must be at least <strong>16</strong> years old to play (see our <a href="terms">Terms of Service</a>). We do not knowingly collect personal information from children under 13 (or the minimum age of digital consent in your country). If you believe a child has created an account, email <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20child%20account">reignofrivals@gmail.com</a> and we will delete it.</p>
+<p>Reign of Rivals is intended for users age <strong>14 and older</strong> and is not directed at children. You must be at least 14 to play (see our <a href="terms">Terms of Service</a>). We do not knowingly collect personal information from anyone under 14. If you believe a child under 14 has created an account, email <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20child%20account">reignofrivals@gmail.com</a> and we will delete it.</p>
 
 <h2 id="international">10. International users</h2>
 <p>Our game server is hosted in a data centre that may be outside your country, and Google Cloud Translation (when used) may process text in other countries. By using the game, your information may be processed outside your country, with the protections described in this policy.</p>
