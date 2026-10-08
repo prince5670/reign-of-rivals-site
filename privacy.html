@@ -41,7 +41,7 @@
 <div class="page-head">
   <div class="wrap narrow">
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: <time datetime="2026-10-07">7 October 2026</time></p>
+    <p class="meta">Last updated: <time datetime="2026-10-08">8 October 2026</time></p>
   </div>
 </div>
 <div class="wrap narrow">
@@ -70,6 +70,7 @@
   <li><strong>Player flag.</strong> The emblem you design from the game's built-in patterns, colours and symbols.</li>
   <li><strong>Terms acceptance.</strong> The version of our Terms of Service you accepted and when. We need this before you can use chat and other social features.</li>
   <li><strong>Sign-in sessions.</strong> A hashed (scrambled) copy of your sign-in token, the platform name your device reports (for example &ldquo;Android&rdquo;), and timestamps. This is not a device identifier.</li>
+  <li><strong>Push notification token (only if you allow notifications).</strong> If you allow notifications on your Android device, the game receives a push token from Google's Firebase Cloud Messaging. We store it with your account and the platform name so we can warn you when an enemy Attack is heading for one of your cities or Shrines. We use it for nothing else.</li>
   <li><strong>Restore codes.</strong> If you lose access to your device, our support team can issue a one-time restore code. We store only a hashed copy. It expires after 15 minutes and can be used once.</li>
 </ul>
 <h3>2.2 Game data</h3>
@@ -95,11 +96,11 @@
 <p>When you buy something, we process limited information about the purchase and link it to your account, so that we can check the purchase is genuine, deliver your Crowns, prevent fraud, handle refunds, reversals and support requests, and keep the records we need for accounting and legal reasons.</p>
 <p>The purchase information we keep is: which Crown pack you bought and how many Crowns it gave you, the Google Play order number, a coded reference to the purchase, when you bought it, and whether it is completed, pending, cancelled or refunded (and, for a refund, whether we have reviewed it). To check a purchase, the game sends our server the purchase reference that Google Play gives it, and our server confirms the purchase directly with Google. We keep that reference itself only until the purchase is fully processed. When you start a purchase, the game also gives Google Play a coded identifier for your game account so the purchase reaches the right account; it does not tell Google who you are in the game.</p>
 <h3>2.7 Information we do not collect</h3>
-<p>We do not collect your precise or approximate location, contacts, photos, videos, audio, files, calendar, browsing history, health information, full payment card or bank account details, or advertising ID. The game currently does not send push notifications and does not collect push tokens. If you email us, we receive your email address and whatever you write, and use it only to answer you.</p>
+<p>We do not collect your precise or approximate location, contacts, photos, videos, audio, files, calendar, browsing history, health information, full payment card or bank account details, or advertising ID. The game sends push notifications only to warn you about incoming Attacks, and only if you allow notifications on your device. If you email us, we receive your email address and whatever you write, and use it only to answer you.</p>
 
 <h2 id="use">3. How we use information</h2>
 <ul>
-  <li><strong>To run the game:</strong> create and sign in to your account, keep your kingdom and the shared World up to date, resolve battles, show rankings, deliver chat and Inbox messages, translate chat when you ask, and restore your account if you lose your device.</li>
+  <li><strong>To run the game:</strong> create and sign in to your account, keep your kingdom and the shared World up to date, resolve battles, show rankings, deliver chat and Inbox messages, warn you about incoming Attacks with a push notification if you allow notifications, translate chat when you ask, and restore your account if you lose your device.</li>
   <li><strong>To handle purchases:</strong> check that purchases are genuine, deliver Crowns, prevent fraud, handle refunds and support requests, and keep purchase records.</li>
   <li><strong>To keep the game fair and safe:</strong> limit repeated sign-in attempts, review reports, mask or remove abusive messages, change offensive names, and suspend accounts that break the rules.</li>
   <li><strong>To support you:</strong> answer questions and handle deletion and recovery requests.</li>
@@ -116,6 +117,7 @@
 <ul>
   <li><strong>Hosting:</strong> our game server and database run on a cloud server we rent from a hosting provider.</li>
   <li><strong>Chat translation (Google Cloud Translation, by Google):</strong> players can translate chat into one of 12 languages (English, Spanish, French, German, Portuguese, Italian, Polish, Turkish, Russian, Japanese, Korean and Chinese (Simplified)). When a player taps <span class="ui">TRANSLATE</span> on a message, or has <span class="ui">AUTO-TRANSLATE</span> turned on, our server sends <strong>only the message text and the language to translate into</strong> to Google Cloud Translation. We don't send Google your player ID, your name, your IP address or any other account data, and the game app itself never contacts Google. Removed messages, Alliance system notices and messages from players you muted or blocked are never sent. Our server keeps each translation for <strong>up to 90 days</strong> so the same message isn't translated twice, and deletes it sooner if the message is removed or its author deletes their account. Google processes the text as our service provider under its Google Cloud terms. If translation is unavailable, chat keeps working and you see the original text.</li>
+  <li><strong>Attack notifications (Firebase Cloud Messaging, by Google):</strong> when an enemy launches an Attack on one of your cities or Shrines, our server sends Google your device's push token and the alert itself: the name of the city or Shrine under attack and when the Attack arrives. It never includes troop counts, your Gold or items, or any other private game data. Google delivers the notification to your device as our service provider under its Firebase terms, and the notification expires when the Attack arrives.</li>
   <li><strong>Game engine:</strong> Unity Technologies, for the engine diagnostics described in section 2.4.</li>
 </ul>
 <p><strong>App store:</strong> if you make a purchase, Google Play (or the store you installed the game from) handles the payment and your payment details as an independent company under its own terms and privacy policy, and tells our server about the purchase so we can verify and deliver it.</p>
@@ -133,6 +135,8 @@
 <tr><td data-label="Data">A deleted account's starter area</td><td data-label="How long">Freed for new players when the account is deleted, if nothing else in the World depends on it (section 6). Otherwise as above.</td></tr>
 <tr><td data-label="Data">Purchase records</td><td data-label="How long">Up to 3 years after the purchase, including after you delete your account, so that we can handle refunds, chargebacks, fraud and accounting. They no longer carry your name after deletion.</td></tr>
 <tr><td data-label="Data">Gameplay analytics</td><td data-label="How long">90 days.</td></tr>
+<tr><td data-label="Data">Push notification tokens</td><td data-label="How long">While your account exists. Deleted sooner if Google reports the token is no longer valid (for example, after you uninstall the game), and deleted with your account.</td></tr>
+<tr><td data-label="Data">Records of attack notifications we sent (which Attack and city, when, and whether delivery worked)</td><td data-label="How long">About 7 days after the notification is finished (delivered, or expired when the Attack arrives).</td></tr>
 <tr><td data-label="Data">Expired sign-in sessions</td><td data-label="How long">About 30 days after they expire.</td></tr>
 <tr><td data-label="Data">Reports about abuse, bugs and cheating, and moderation records</td><td data-label="How long">No fixed end date at present.</td></tr>
 <tr><td data-label="Data">Translated copies of chat messages</td><td data-label="How long">Up to 90 days. Deleted sooner if the message is removed or its author deletes their account.</td></tr>
@@ -149,7 +153,7 @@
 <ul>
   <li>It can never sign in again. All sessions end and unused restore codes stop working.</li>
   <li>Your display name becomes &ldquo;Deleted Player&rdquo; everywhere it appears, including chat history, Alliance notices, reports, rankings history, Season results and city names that were based on your name. Your former names become available to other players.</li>
-  <li>Your Alliance place is released, stored device labels are deleted, and your analytics activity records are deleted or unlinked from your player ID.</li>
+  <li>Your Alliance place is released, stored device labels and push notification tokens are deleted, and your analytics activity records are deleted or unlinked from your player ID.</li>
   <li>Your own mute and block lists and your chat settings (chat language, Auto-Translate, profanity filter) are deleted, translations of your messages are deleted, and the device model and operating-system version are removed from any bug or cheating reports you sent.</li>
   <li>Your starter area is freed for new players if nothing else in the World depends on it: the only land you hold is your Main City and your five starter cities, and no other player's March or safety report involves it. Your own Marches to or from that area are removed with it. Land you gave up earlier with Fresh Start has already become public neutral land and stays that way.</li>
 </ul>
@@ -169,6 +173,7 @@
 <h2 id="rights">8. Your choices and rights</h2>
 <ul>
   <li>Change your display name in your Profile. Choose your chat language and turn Auto-Translate and the profanity filter on or off in <span class="ui">Settings</span>. Mute or block players, and report abusive messages or names.</li>
+  <li>Turn attack notifications off at any time in your device's notification settings for the game, or by not allowing them when the game asks.</li>
   <li>Delete your account at any time (section 6).</li>
   <li>Depending on where you live, you may have the right to access, correct, delete or receive a copy of your personal data, to object to or restrict some uses, and to complain to your local data-protection authority. To make a request, email <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20privacy%20request">reignofrivals@gmail.com</a> with your exact player name. We may ask for details that help us confirm the account is yours.</li>
 </ul>
@@ -177,10 +182,10 @@
 <p>Reign of Rivals is intended for users age <strong>14 and older</strong> and is not directed at children. You must be at least 14 to play (see our <a href="terms">Terms of Service</a>). We do not knowingly collect personal information from anyone under 14. If you believe a child under 14 has created an account, email <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20child%20account">reignofrivals@gmail.com</a> and we will delete it.</p>
 
 <h2 id="international">10. International users</h2>
-<p>Our game server is hosted in a data centre that may be outside your country, and Google Cloud Translation (when used) may process text in other countries. By using the game, your information may be processed outside your country, with the protections described in this policy.</p>
+<p>Our game server is hosted in a data centre that may be outside your country, and Google Cloud Translation and Firebase Cloud Messaging (when used) may process data in other countries. By using the game, your information may be processed outside your country, with the protections described in this policy.</p>
 
 <h2 id="changes">11. Changes to this policy</h2>
-<p>We may update this policy as the game changes (for example, if we change how purchases work, or add push notifications or new sign-in methods). We will change the &ldquo;Last updated&rdquo; date above and, for important changes, tell players in the game.</p>
+<p>We may update this policy as the game changes (for example, if we change how purchases work or notifications work, or add new sign-in methods). We will change the &ldquo;Last updated&rdquo; date above and, for important changes, tell players in the game.</p>
 
 <h2 id="contact">12. Contact</h2>
 <p>Reign of Rivals<br>Email: <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20privacy">reignofrivals@gmail.com</a></p>
