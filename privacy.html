@@ -41,14 +41,15 @@
 <div class="page-head">
   <div class="wrap narrow">
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: <time datetime="2026-10-08">8 October 2026</time></p>
+    <p class="meta">Last updated: <time datetime="2026-11-01">1 November 2026</time></p>
   </div>
 </div>
 <div class="wrap narrow">
   <article class="doc">
 
 <p>This Privacy Policy explains what information the mobile game <strong>Reign of Rivals</strong> (the &ldquo;game&rdquo;) collects, how it is used, who can see it, how long it is kept, and how you can delete it. In this policy, &ldquo;we&rdquo; and &ldquo;us&rdquo; mean the team that makes and runs Reign of Rivals. You can contact us at <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20privacy">reignofrivals@gmail.com</a>.</p>
-<p>This policy covers the Android app and the game servers it connects to.</p>
+<p>This policy covers the Android app, the game servers it connects to, and the account deletion page on our website.</p>
+<!-- iOS placeholder: before an iOS release, add the iPhone app (App Store purchases, Sign in with Apple if offered, Apple push notifications) to this policy. -->
 <nav class="toc" aria-label="Contents"><strong>Contents</strong><ol><li><a href="#summary">Summary</a></li><li><a href="#collect">Information we collect</a></li><li><a href="#use">How we use information</a></li><li><a href="#see">Who can see your information</a></li><li><a href="#keep">How long we keep information</a></li><li><a href="#delete">Deleting your account</a></li><li><a href="#security">Security</a></li><li><a href="#rights">Your choices and rights</a></li><li><a href="#children">Children</a></li><li><a href="#international">International users</a></li><li><a href="#changes">Changes to this policy</a></li><li><a href="#contact">Contact</a></li></ol></nav>
 
 
@@ -58,8 +59,9 @@
   <li>The game may offer <strong>optional in-app purchases</strong> of Crowns, its virtual currency. Payments are processed by the app store (Google Play on Android), and we do <strong>not</strong> receive your full payment card details (section 2.6).</li>
   <li>We do <strong>not</strong> ask for your real name, email address, phone number, contacts, photos, microphone, camera or location.</li>
   <li>When you tap <span class="ui">Continue</span> on the first screen, our server creates a <strong>guest account</strong> for you. It is identified by random IDs and a display name, not by an email or password.</li>
+  <li>On Android you can <strong>optionally link a Google account</strong> so you can bring your kingdom to a new device. We store only an ID for that Google account, not your email address (section 2.1).</li>
   <li>We store your <strong>game progress</strong>, your <strong>display name</strong>, and the <strong>chat messages</strong> you send. Chat messages are kept with no fixed end date, including after you delete your account (shown as &ldquo;Deleted Player&rdquo;).</li>
-  <li>You can <strong>delete your account</strong> in the game (<span class="ui">Settings</span> &rsaquo; <span class="ui">ACCOUNT / LEGAL</span> &rsaquo; <span class="ui">ACCOUNT DELETION</span>) or by email. See <a href="delete-account">Delete your account</a>.</li>
+  <li>You can <strong>delete your account</strong> in the game (<span class="ui">Settings</span> &rsaquo; <span class="ui">ACCOUNT</span> &rsaquo; <span class="ui">ACCOUNT DELETION</span>), on our website, or by email. See <a href="delete-account">Delete your account</a>.</li>
 </ul>
 
 <h2 id="collect">2. Information we collect</h2>
@@ -72,6 +74,7 @@
   <li><strong>Sign-in sessions.</strong> A hashed (scrambled) copy of your sign-in token, the platform name your device reports (for example &ldquo;Android&rdquo;), and timestamps. This is not a device identifier.</li>
   <li><strong>Push notification token (only if you allow notifications).</strong> If you allow notifications on your Android device, the game receives a push token from Google's Firebase Cloud Messaging. We store it with your account and the platform name so we can warn you when an enemy Attack is heading for one of your cities or Shrines. We use it for nothing else.</li>
   <li><strong>Restore codes.</strong> If you lose access to your device, our support team can issue a one-time restore code. We store only a hashed copy. It expires after 15 minutes and can be used once.</li>
+  <li><strong>Linked Google account (optional, Android only).</strong> If you tap <span class="ui">LINK GOOGLE</span> in <span class="ui">Settings</span> &rsaquo; <span class="ui">ACCOUNT</span>, Google's sign-in screen gives our server a signed sign-in token. Our server checks it with Google's public keys and keeps only the permanent ID Google uses for your Google account (Google calls it the &ldquo;subject&rdquo;), when you linked it and when it was last used to restore your kingdom. The token also contains your email address, name and profile picture; we do <strong>not</strong> store them. The same applies when you use <span class="ui">RESTORE WITH GOOGLE</span> on a new device, or Google sign-in on our account deletion page. You can unlink at any time; unlinking or deleting your account deletes the stored ID. To stop a sign-in being reused, we keep a scrambled one-time code from each sign-in for about a day.</li>
 </ul>
 <h3>2.2 Game data</h3>
 <p>Everything that makes up your kingdom and its history, for example: your cities, troops, Gold, Crowns, Gear, Runes, chests and other items; your Level, stats, quests and rewards; Marches, battles and Scout reports; Season, League and ranking results; Alliance membership and role; friends and friend requests; your mute and block lists; and when you were last active.</p>
@@ -87,10 +90,10 @@
 <ul>
   <li><strong>Gameplay analytics (our own, no third-party SDK).</strong> When the game talks to our server, we record your player ID, which game action was requested (for example &ldquo;send a March&rdquo;), whether it succeeded, an error code if it failed, the time, and your game version. The game also tells our server when it is opened, resumed, and every five minutes while it is open, so we can count active players and sessions. These records do <strong>not</strong> contain the content of your requests, chat text, passwords, restore codes, IP addresses or device identifiers. They are deleted after <strong>90 days</strong>.</li>
   <li><strong>IP address.</strong> Like any internet service, our server sees your device's IP address when it connects. The game server uses it in memory to limit repeated sign-in attempts and does not save it in the game database. Our server's system and web-server logs may record IP addresses, times and requested addresses for security and troubleshooting; these logs are kept for a limited time and are overwritten as they rotate. We do not use your IP address to work out your location.</li>
-  <li><strong>Game engine diagnostics.</strong> The game is built with the Unity engine (Unity Technologies). Unity may collect technical diagnostics from the game, such as crash and performance information, device model, operating-system version and an app-install identifier, so that engine problems can be found and fixed. Unity handles this data under its own privacy policy.</li>
+  <li><strong>Game engine diagnostics.</strong> The game is built with the Unity engine (Unity Technologies). From version 1.7.1 the game has Unity's engine diagnostics turned off. Earlier test versions had them on; in those versions Unity may collect technical diagnostics such as crash and performance information, device model, operating-system version and an app-install identifier, under Unity's own privacy policy.</li>
 </ul>
 <h3>2.5 Information stored on your device</h3>
-<p>The game stores your sign-in credential in your device's protected storage (Android Keystore), and keeps game settings such as sound volume, chat settings and any restore code you typed. Logging out removes the sign-in credential. Deleting your account in the game removes the sign-in credential and any saved codes. Clearing the app's data or uninstalling the game removes all of it. <strong>Uninstalling the game or clearing its data removes your sign-in</strong>; without a restore code from support you won't be able to get back into the same kingdom.</p>
+<p>The game stores your sign-in credential in your device's protected storage (Android Keystore), and keeps game settings such as sound volume, chat settings and any restore code you typed. Logging out removes the sign-in credential. Deleting your account in the game removes the sign-in credential and any saved codes. Clearing the app's data or uninstalling the game removes all of it. <strong>Uninstalling the game or clearing its data removes your sign-in</strong>; to get back into the same kingdom you then need a linked Google account (<span class="ui">RESTORE WITH GOOGLE</span>) or a restore code from support.</p>
 <h3>2.6 Purchases</h3>
 <p>Reign of Rivals may offer optional in-app purchases of Crowns, the game's virtual currency. Purchases are made through the app store you installed the game from (on Android, Google Play), and the store processes the payment under its own terms and privacy policy. We do <strong>not</strong> receive or store your full payment card details.</p>
 <p>When you buy something, we process limited information about the purchase and link it to your account, so that we can check the purchase is genuine, deliver your Crowns, prevent fraud, handle refunds, reversals and support requests, and keep the records we need for accounting and legal reasons.</p>
@@ -100,7 +103,7 @@
 
 <h2 id="use">3. How we use information</h2>
 <ul>
-  <li><strong>To run the game:</strong> create and sign in to your account, keep your kingdom and the shared World up to date, resolve battles, show rankings, deliver chat and Inbox messages, warn you about incoming Attacks with a push notification if you allow notifications, translate chat when you ask, and restore your account if you lose your device.</li>
+  <li><strong>To run the game:</strong> create and sign in to your account, keep your kingdom and the shared World up to date, resolve battles, show rankings, deliver chat and Inbox messages, warn you about incoming Attacks with a push notification if you allow notifications, translate chat when you ask, and restore your account if you lose your device (with a linked Google account or a restore code).</li>
   <li><strong>To handle purchases:</strong> check that purchases are genuine, deliver Crowns, prevent fraud, handle refunds and support requests, and keep purchase records.</li>
   <li><strong>To keep the game fair and safe:</strong> limit repeated sign-in attempts, review reports, mask or remove abusive messages, change offensive names, and suspend accounts that break the rules.</li>
   <li><strong>To support you:</strong> answer questions and handle deletion and recovery requests.</li>
@@ -118,7 +121,8 @@
   <li><strong>Hosting:</strong> our game server and database run on a cloud server we rent from a hosting provider.</li>
   <li><strong>Chat translation (Google Cloud Translation, by Google):</strong> players can translate chat into one of 12 languages (English, Spanish, French, German, Portuguese, Italian, Polish, Turkish, Russian, Japanese, Korean and Chinese (Simplified)). When a player taps <span class="ui">TRANSLATE</span> on a message, or has <span class="ui">AUTO-TRANSLATE</span> turned on, our server sends <strong>only the message text and the language to translate into</strong> to Google Cloud Translation. We don't send Google your player ID, your name, your IP address or any other account data, and the game app itself never contacts Google. Removed messages, Alliance system notices and messages from players you muted or blocked are never sent. Our server keeps each translation for <strong>up to 90 days</strong> so the same message isn't translated twice, and deletes it sooner if the message is removed or its author deletes their account. Google processes the text as our service provider under its Google Cloud terms. If translation is unavailable, chat keeps working and you see the original text.</li>
   <li><strong>Attack notifications (Firebase Cloud Messaging, by Google):</strong> when an enemy launches an Attack on one of your cities or Shrines, our server sends Google your device's push token and the alert itself: the name of the city or Shrine under attack and when the Attack arrives. It never includes troop counts, your Gold or items, or any other private game data. Google delivers the notification to your device as our service provider under its Firebase terms, and the notification expires when the Attack arrives.</li>
-  <li><strong>Game engine:</strong> Unity Technologies, for the engine diagnostics described in section 2.4.</li>
+  <li><strong>Google sign-in (optional, by Google):</strong> if you link a Google account or use Google sign-in to restore or delete your kingdom, Google shows its own sign-in screen and tells our server the result as described in section 2.1. Google then knows that you signed in to Reign of Rivals, under Google's own privacy policy. Our account deletion page loads Google's sign-in button from Google only for this purpose.</li>
+  <li><strong>Game engine:</strong> Unity Technologies, for the engine diagnostics described in section 2.4 (earlier test versions only).</li>
 </ul>
 <p><strong>App store:</strong> if you make a purchase, Google Play (or the store you installed the game from) handles the payment and your payment details as an independent company under its own terms and privacy policy, and tells our server about the purchase so we can verify and deliver it.</p>
 <p><strong>Legal reasons:</strong> we may disclose information if the law requires it, or to protect players, the game or others.</p>
@@ -128,7 +132,9 @@
 <div class="table-wrap"><table>
 <thead><tr><th scope="col">Data</th><th scope="col">How long</th></tr></thead>
 <tbody>
-<tr><td data-label="Data">Account, profile and game data</td><td data-label="How long">While your account exists. After you delete your account, your name is removed and these records are kept without it, with no fixed end date; they can no longer be used or restored (section 6).</td></tr>
+<tr><td data-label="Data">Account, profile and game data</td><td data-label="How long">While your account exists. When you delete your account, your name and sign-in data are removed at once (section 6). Your items (Gear, Runes, chests, consumables), Crowns balance, Inbox mail, quest progress and friend list are deleted <strong>30 days</strong> after deletion. Your random account and player IDs, League profile, Terms acceptance record and redeemed promo codes are kept without your name, with no fixed end date, so that shared history and purchase records stay consistent.</td></tr>
+<tr><td data-label="Data">Linked Google account ID</td><td data-label="How long">While it is linked. Deleted at once when you unlink it or delete your account.</td></tr>
+<tr><td data-label="Data">Account deletion requests made on the website or by email (which account, how ownership was shown, dates; no name or email)</td><td data-label="How long">3 years, as a record that the request was received and carried out. Emails you send us are kept only as long as needed to answer them.</td></tr>
 <tr><td data-label="Data">Chat messages and private messages</td><td data-label="How long"><strong>No fixed end date.</strong> They are kept as part of the shared chat history, including after you delete your account (your name is replaced with &ldquo;Deleted Player&rdquo;). Messages removed by a moderator are hidden from players but kept in our records.</td></tr>
 <tr><td data-label="Data">Battle and Scout reports, Season and League results</td><td data-label="How long">No fixed end date (game history). Your name is replaced with &ldquo;Deleted Player&rdquo; if you delete your account.</td></tr>
 <tr><td data-label="Data">Cities, Marches and map items of a finished Season's World</td><td data-label="How long">Deleted about 30 days after that Season ends.</td></tr>
@@ -138,33 +144,36 @@
 <tr><td data-label="Data">Push notification tokens</td><td data-label="How long">While your account exists. Deleted sooner if Google reports the token is no longer valid (for example, after you uninstall the game), and deleted with your account.</td></tr>
 <tr><td data-label="Data">Records of attack notifications we sent (which Attack and city, when, and whether delivery worked)</td><td data-label="How long">About 7 days after the notification is finished (delivered, or expired when the Attack arrives).</td></tr>
 <tr><td data-label="Data">Expired sign-in sessions</td><td data-label="How long">About 30 days after they expire.</td></tr>
-<tr><td data-label="Data">Reports about abuse, bugs and cheating, and moderation records</td><td data-label="How long">No fixed end date at present.</td></tr>
+<tr><td data-label="Data">Reports about abuse, bugs and cheating</td><td data-label="How long">While the players involved have accounts. Deleted <strong>1 year</strong> after the player who sent the report, or the player it is about, deletes their account.</td></tr>
+<tr><td data-label="Data">Records of moderation actions (which action, by which moderator, on which player ID, when)</td><td data-label="How long">No fixed end date. They are our audit trail and hold player IDs, not your messages.</td></tr>
 <tr><td data-label="Data">Translated copies of chat messages</td><td data-label="How long">Up to 90 days. Deleted sooner if the message is removed or its author deletes their account.</td></tr>
 <tr><td data-label="Data">Chat settings (chat language, Auto-Translate, profanity filter)</td><td data-label="How long">While your account exists. Deleted with your account.</td></tr>
-<tr><td data-label="Data">Server backups</td><td data-label="How long">Until the backup is deleted. There is no fixed schedule yet.</td></tr>
-<tr><td data-label="Data">Server logs</td><td data-label="How long">A limited time, until the logs rotate and are overwritten.</td></tr>
+<tr><td data-label="Data">Server backups</td><td data-label="How long">Up to 90 days, then deleted. Data deleted from the game stays in a backup until that backup is deleted.</td></tr>
+<tr><td data-label="Data">Server logs (may include IP addresses)</td><td data-label="How long">Up to 30 days.</td></tr>
 </tbody>
 </table></div>
 
 <h2 id="delete">6. Deleting your account</h2>
-<p><strong>In the game:</strong> open <span class="ui">Settings</span> (the cog button at the top right) &rsaquo; <span class="ui">ACCOUNT / LEGAL</span> &rsaquo; <span class="ui">ACCOUNT DELETION</span> &rsaquo; <span class="ui">CONFIRM DELETE ACCOUNT</span>.</p>
-<p><strong>Without the app:</strong> follow the steps on our <a href="delete-account">Delete your account</a> page, or email <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20account%20deletion">reignofrivals@gmail.com</a>. Player names are public in the game, so a name alone doesn't prove ownership. To protect players, we delete by email only accounts that haven't been signed in on any device for at least 14 days; if the account was used more recently, we reply with the in-game steps instead. We never send a restore code in reply to a deletion request. We aim to complete requests that pass this check within 30 days.</p>
+<p><strong>In the game:</strong> open <span class="ui">Settings</span> (the cog button at the top right) &rsaquo; <span class="ui">ACCOUNT</span> &rsaquo; <span class="ui">ACCOUNT DELETION</span> &rsaquo; <span class="ui">CONFIRM DELETE ACCOUNT</span>. This deletes the account at once.</p>
+<p><strong>Without the app:</strong> use our <a href="delete-account">Delete your account</a> page. You show the kingdom is yours by signing in with the Google account you linked in the game, or with a restore code from support, and then confirm. The account is deleted automatically <strong>7 days</strong> later; until then you can keep it by opening the game and tapping <span class="ui">KEEP MY ACCOUNT</span> in <span class="ui">Settings</span> &rsaquo; <span class="ui">ACCOUNT</span>, or by emailing us.</p>
+<p><strong>By email:</strong> write to <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20account%20deletion">reignofrivals@gmail.com</a> with your exact player name. Player names are public in the game, so a name alone doesn't prove ownership. If you bought Crowns, include a Google Play order number from your receipt: that proves the account is yours and the account is deleted 7 days later. Without such proof we still accept the request, but the account is deleted only once it has gone 14 days without being used, and the request is cancelled if the account is played again in the meantime, so that nobody can delete a kingdom someone else is still playing. We never send a restore code in reply to a deletion request. Accounts that pass these checks are deleted within 30 days of the request.</p>
 <p>When an account is deleted:</p>
 <ul>
   <li>It can never sign in again. All sessions end and unused restore codes stop working.</li>
   <li>Your display name becomes &ldquo;Deleted Player&rdquo; everywhere it appears, including chat history, Alliance notices, reports, rankings history, Season results and city names that were based on your name. Your former names become available to other players.</li>
-  <li>Your Alliance place is released, stored device labels and push notification tokens are deleted, and your analytics activity records are deleted or unlinked from your player ID.</li>
+  <li>Your Alliance place is released, stored device labels and push notification tokens are deleted, a linked Google account ID is deleted, and your analytics activity records are deleted or unlinked from your player ID.</li>
   <li>Your own mute and block lists and your chat settings (chat language, Auto-Translate, profanity filter) are deleted, translations of your messages are deleted, and the device model and operating-system version are removed from any bug or cheating reports you sent.</li>
   <li>Your starter area is freed for new players if nothing else in the World depends on it: the only land you hold is your Main City and your five starter cities, and no other player's March or safety report involves it. Your own Marches to or from that area are removed with it. Land you gave up earlier with Fresh Start has already become public neutral land and stays that way.</li>
 </ul>
 <p>Some information is <strong>kept</strong> after deletion. It no longer carries your name and is no longer linked to any way of signing in, so it can't be used or restored by you or anyone else:</p>
 <ul>
-  <li><strong>Game records, with no fixed end date:</strong> your account and player ID (random identifiers), Gear, Runes, chests, Crowns and other items, quest progress, Inbox mail, League profile, friend list, your Terms acceptance record, and promo codes you redeemed. Other players' mute and block lists that include you are their own settings and stay.</li>
+  <li><strong>For 30 days, then deleted:</strong> your Gear, Runes, chests and other items, Crowns balance, quest progress, Inbox mail, friend list, and the records of your old sign-in sessions and restore codes.</li>
+  <li><strong>Game records, with no fixed end date:</strong> your account and player ID (random identifiers), League profile, your Terms acceptance record, and promo codes you redeemed. Other players' mute and block lists that include you are their own settings and stay.</li>
   <li><strong>Shared World records:</strong> if your starter area can't be freed (for example, because you captured other cities, or another player's March or safety report involves it), your cities stay on the map without your name until that Season's World is cleaned up (about 30 days after the Season ends); battle and Scout reports and Season results remain for the other players involved, with no fixed end date.</li>
   <li><strong>Messages:</strong> <strong>the text of chat and private messages you sent stays</strong> (shown as &ldquo;Deleted Player&rdquo;), with no fixed end date. Translations of your messages are deleted.</li>
-  <li><strong>Safety records:</strong> reports about abuse, bugs and cheating (including the reported message and its nearby messages) are kept with no fixed end date at present.</li>
+  <li><strong>Safety records:</strong> reports about abuse, bugs and cheating that involve you (including the reported message and its nearby messages) are kept for 1 year after deletion, then deleted. Records of moderation actions keep your player ID with no fixed end date.</li>
   <li><strong>Purchase records:</strong> kept for up to 3 years after each purchase for refunds, fraud prevention, and accounting and legal obligations (section 5), without your name. Deleting your account does not refund purchases. A purchase that is still waiting for payment when you delete your account is not delivered, and Google Play cancels or refunds it.</li>
-  <li><strong>Backups and logs:</strong> copies may remain in server backups until those backups are deleted, and in server logs until they rotate.</li>
+  <li><strong>Backups and logs:</strong> copies may remain in server backups for up to 90 days and in server logs for up to 30 days.</li>
 </ul>
 
 <h2 id="security">7. Security</h2>
@@ -185,7 +194,7 @@
 <p>Our game server is hosted in a data centre that may be outside your country, and Google Cloud Translation and Firebase Cloud Messaging (when used) may process data in other countries. By using the game, your information may be processed outside your country, with the protections described in this policy.</p>
 
 <h2 id="changes">11. Changes to this policy</h2>
-<p>We may update this policy as the game changes (for example, if we change how purchases work or notifications work, or add new sign-in methods). We will change the &ldquo;Last updated&rdquo; date above and, for important changes, tell players in the game.</p>
+<p>We may update this policy as the game changes (for example, if we change how purchases or notifications work, or add new sign-in methods such as Sign in with Apple). We will change the &ldquo;Last updated&rdquo; date above and, for important changes, tell players in the game.</p>
 
 <h2 id="contact">12. Contact</h2>
 <p>Reign of Rivals<br>Email: <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20privacy">reignofrivals@gmail.com</a></p>
