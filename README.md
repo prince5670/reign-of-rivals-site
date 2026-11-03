@@ -37,20 +37,21 @@ Prepared on 2026-11-02 for the V10 public launch. Publishing is the owner's call
 - **Privacy 2.2:** daily login reward claim records, and Season recaps (personal, permanent, only the player sees them; the opponent is stored as a kind, never a name).
 - **Privacy 2.3:** Alliance Mark notes (60 characters, filtered like chat, optional chat post). Section 4 says Alliance members see them.
 - **Privacy 2.4:** new-player milestone times, used only for totals-only reports. Numbers 1 to 4 and sign-up days with fewer than 5 players are hidden.
-- **Privacy, sections 5 and 6, and the Delete account table:** retention for daily reward claims, Season recaps, milestone times, Alliance Marks and notification settings. These match the current server code; see the game repo `docs/release/V10_DATA_SAFETY.md` for the gaps the owner may want fixed first.
+- **Privacy, sections 5 and 6, and the Delete account table:** retention for daily reward claims, Season recaps, milestone times, Alliance Marks and notification settings. These rows match the server fixes on game-repo branch `claude/v10-retention-fixes` (`docs/release/V10_RETENTION_FIXES.md`): notification settings and the time-zone offset are deleted immediately on account deletion; daily reward claims and new-player milestones are deleted 30 days after deletion; Alliance Marks and their notifications are deleted within about 2 hours after the mark ends; names on marks become "Deleted Player". **The V10 server must include `claude/v10-retention-fixes` before this text is published.**
 - **Privacy 2.5, 8 and 11:** the chosen menu language is stored on the device, notification choices are listed under "Your choices", and the policy is in English only.
 - **Terms:** Alliance Mark notes added to the conduct rules (section 4) and to content you create (section 5); a daily login rewards item (7.1); and a line saying the Terms are in English only (section 13).
 - `sitemap.xml` lastmod is 2026-11-02 for support, privacy, terms and delete-account.
 
-**Three HTML comments mark text that depends on V10 features shipping.** Before publishing, check each one, delete the comment, and also delete its item if the feature is not in the release:
-1. `privacy.html` 2.7: the **Reminders** item (`claude/v10-reminders`, still in progress on 2026-11-02).
-2. `terms.html` 7.1: the **Daily login rewards** item (`DailyRewards__Enabled=true` at release).
-3. The "available in English only" lines assume the V10 menu translations (`claude/v10-localization`) ship. Without them, the lines are still true and harmless.
+**Owner decisions (2026-11-02), already applied:** the HTML marker comments are gone.
+1. `privacy.html` 2.7: the **Reminders** item stays (reminders ship).
+2. `terms.html` 7.1: the **Daily login rewards** item stays (daily rewards are ON at release).
+3. Legal text stays English-only; the "available in English only" lines stay.
+4. Google linking stays OFF at launch; the "where the game offers it" wording stays as is.
 
 **How to publish (owner, at the V10 release):**
-1. Deploy the V10 server first: the web deletion page `https://beta.kingdombeta.com/account/delete` and the new notification, Alliance Mark, daily reward, Season recap and funnel tables must exist. Ship the V10 client to players.
+1. Deploy the V10 server first, including `claude/v10-retention-fixes` (the retention rows promise its behaviour) and `claude/v10-reminders` (privacy 2.7 lists reminders): the web deletion page `https://beta.kingdombeta.com/account/delete` and the new notification, Alliance Mark, daily reward, Season recap and funnel tables must exist. Ship the V10 client to players.
 2. Do the host retention steps that the policy now promises: journald 30 days, proxy logs 30 days, backups older than 90 days deleted (`V10_ACCOUNTS_LEGAL.md` section 3.2).
-3. Resolve the three markers above, then commit.
+3. Check that nothing above has changed since 2026-11-02, then commit.
 4. Merge and push. Pushing `main` publishes the site:
    ```bash
    cd C:/Users/princ/reign-of-rivals-site
