@@ -54,7 +54,7 @@
 
 <h2 id="summary">1. Summary</h2>
 <ul>
-  <li>The game has <strong>no ads</strong> and <strong>no third-party advertising or analytics SDKs</strong>.</li>
+  <li>The game shows <strong>no ads</strong>. On Android, we use <strong>Meta's App Events SDK</strong> only to measure whether our own ads for the game on Facebook and Instagram lead to installs. It shares your device's advertising ID, the fact that the game was installed and opened, and when you capture your first city. You can turn this off at any time in <span class="ui">Settings</span> &rsaquo; <span class="ui">LEGAL &amp; ABOUT</span> &rsaquo; <span class="ui">SHARE AD MEASUREMENT DATA</span> (section 2.8).</li>
   <li>The game may offer <strong>optional in-app purchases</strong> of Crowns, its virtual currency. Payments are processed by the app store (Google Play on Android), and we do <strong>not</strong> receive your full payment card details (section 2.6).</li>
   <li>We do <strong>not</strong> ask for your real name, email address, phone number, contacts, photos, microphone, camera or location.</li>
   <li>When you tap <span class="ui">Continue</span> on the first screen, our server creates a <strong>guest account</strong> for you. It is identified by random IDs and a display name, not by an email or password.</li>
@@ -91,13 +91,33 @@
   <li><strong>Game engine diagnostics.</strong> The game is built with the Unity engine (Unity Technologies). Unity may collect technical diagnostics from the game, such as crash and performance information, device model, operating-system version and an app-install identifier, so that engine problems can be found and fixed. Unity handles this data under its own privacy policy.</li>
 </ul>
 <h3>2.5 Information stored on your device</h3>
-<p>The game stores your sign-in credential in your device's protected storage (Android Keystore), and keeps game settings such as sound volume, chat settings and any restore code you typed. Logging out removes the sign-in credential. Deleting your account in the game removes the sign-in credential and any saved codes. Clearing the app's data or uninstalling the game removes all of it. <strong>Uninstalling the game or clearing its data removes your sign-in</strong>; without a restore code from support you won't be able to get back into the same kingdom.</p>
+<p>The game stores your sign-in credential in your device's protected storage (Android Keystore), and keeps game settings such as sound volume, chat settings, your <span class="ui">SHARE AD MEASUREMENT DATA</span> choice, a note that the first-city event was already sent to Meta for this install (section 2.8), and any restore code you typed. Logging out removes the sign-in credential. Deleting your account in the game removes the sign-in credential and any saved codes. Clearing the app's data or uninstalling the game removes all of it. <strong>Uninstalling the game or clearing its data removes your sign-in</strong>; without a restore code from support you won't be able to get back into the same kingdom.</p>
 <h3>2.6 Purchases</h3>
 <p>Reign of Rivals may offer optional in-app purchases of Crowns, the game's virtual currency. Purchases are made through the app store you installed the game from (on Android, Google Play), and the store processes the payment under its own terms and privacy policy. We do <strong>not</strong> receive or store your full payment card details.</p>
 <p>When you buy something, we process limited information about the purchase and link it to your account, so that we can check the purchase is genuine, deliver your Crowns, prevent fraud, handle refunds, reversals and support requests, and keep the records we need for accounting and legal reasons.</p>
 <p>The purchase information we keep is: which Crown pack you bought and how many Crowns it gave you, the Google Play order number, a coded reference to the purchase, when you bought it, and whether it is completed, pending, cancelled or refunded (and, for a refund, whether we have reviewed it). To check a purchase, the game sends our server the purchase reference that Google Play gives it, and our server confirms the purchase directly with Google. We keep that reference itself only until the purchase is fully processed. When you start a purchase, the game also gives Google Play a coded identifier for your game account so the purchase reaches the right account; it does not tell Google who you are in the game.</p>
 <h3>2.7 Information we do not collect</h3>
-<p>We do not collect your precise or approximate location, contacts, photos, videos, audio, files, calendar, browsing history, health information, full payment card or bank account details, or advertising ID. The game sends push notifications only to warn you about incoming Attacks, and only if you allow notifications on your device. If you email us, we receive your email address and whatever you write, and use it only to answer you.</p>
+<p>We do not collect your precise or approximate location, contacts, photos, videos, audio, files, calendar, browsing history, health information, or full payment card or bank account details. Our own servers never receive or store your advertising ID; on Android it is shared only with Meta, as described in section 2.8. The game sends push notifications only to warn you about incoming Attacks, and only if you allow notifications on your device. If you email us, we receive your email address and whatever you write, and use it only to answer you.</p>
+
+<h3 id="ads-measurement">2.8 Advertising measurement (Meta, Android only)</h3>
+<p>We advertise Reign of Rivals on Facebook and Instagram. To find out which of our ads lead to people installing and playing the game, the Android app includes Meta's App Events SDK (provided by Meta Platforms, Inc. and Meta Platforms Ireland Ltd., &ldquo;Meta&rdquo;). The game itself shows no ads. The SDK is used only for this measurement; we do not use Facebook Login or sharing.</p>
+<p><strong>When it runs.</strong> The SDK stays switched off when the app starts. It starts only after you have signed in, and only when we have turned measurement on for the game and you have not turned it off in Settings. It is not used in the iOS app.</p>
+<p><strong>What Meta receives</strong> once it runs:</p>
+<ul>
+  <li><strong>Your device's advertising ID</strong> (Google advertising ID), and an app-install identifier the SDK creates.</li>
+  <li><strong>Install and app-open events:</strong> that the game was installed and each time it is opened, with the Google Play install referrer (which tells Meta whether the install came from an ad).</li>
+  <li><strong>One gameplay milestone:</strong> when you capture your first city, the SDK sends Meta a &ldquo;Completed Tutorial&rdquo; event. It is sent at most once per install.</li>
+  <li><strong>Basic technical information</strong> the SDK sends with each event, such as the app name and version, device model, Android version, language, time zone, screen size, mobile network name and the time of the event. Like any internet service, Meta also sees your IP address when the SDK connects.</li>
+</ul>
+<p>We do <strong>not</strong> send Meta your display name, player or account ID, email address, chat messages, in-app purchases, or any game progress other than the first-city milestone.</p>
+<p><strong>Why.</strong> To count the installs that came from our ads (attribution), to measure how well each ad works, and to help Meta show our ads to people who are likely to enjoy the game.</p>
+<p><strong>Your choices.</strong></p>
+<ul>
+  <li><strong>In the game:</strong> turn off <span class="ui">Settings</span> &rsaquo; <span class="ui">LEGAL &amp; ABOUT</span> &rsaquo; <span class="ui">SHARE AD MEASUREMENT DATA</span>. This stops sending events and your advertising ID straight away, and from the next time you open the game the SDK is not started at all. The choice is saved on your device, so if you reinstall the game or clear its data, turn it off again.</li>
+  <li><strong>On your device:</strong> you can reset or delete your advertising ID at any time in Android settings (usually <span class="ui">Settings</span> &rsaquo; <span class="ui">Google</span> &rsaquo; <span class="ui">Ads</span>, or <span class="ui">Settings</span> &rsaquo; <span class="ui">Privacy</span> &rsaquo; <span class="ui">Ads</span> on some devices). After you delete it, apps, including this one, can no longer read it.</li>
+  <li><strong>With Meta:</strong> if you have a Facebook or Instagram account, you can review and disconnect activity that apps share with Meta under <span class="ui">Your activity off Meta technologies</span> in Meta's Accounts Center, and choose how Meta uses it for ads in your ad preferences.</li>
+</ul>
+<p><strong>How long it is kept.</strong> Our servers do not receive or store any of this data. Meta keeps and uses it under its own policy; see the <a href="https://www.facebook.com/privacy/policy/" rel="noopener">Meta Privacy Policy</a> for how Meta handles data and how long it keeps it.</p>
 
 <h2 id="use">3. How we use information</h2>
 <ul>
@@ -106,9 +126,10 @@
   <li><strong>To keep the game fair and safe:</strong> limit repeated sign-in attempts, review reports, mask or remove abusive messages, change offensive names, and suspend accounts that break the rules.</li>
   <li><strong>To support you:</strong> answer questions and handle deletion and recovery requests.</li>
   <li><strong>To improve the game:</strong> understand, in aggregate, which features are used, where new players stop, and which errors happen.</li>
+  <li><strong>To measure our advertising (Android):</strong> share the limited data in section 2.8 with Meta, so we can count installs that came from our ads and improve our ad campaigns.</li>
 </ul>
-<p>We do not sell your information, and we do not use it for advertising or to build advertising profiles.</p>
-<p>If you are in the European Economic Area or the United Kingdom: we provide the game to you under our Terms of Service (performance of a contract); we keep the game secure, moderate it and measure how it is used because we have a legitimate interest in running a safe, working game; we keep records the law requires us to keep, such as purchase records, to meet our legal obligations; and where we rely on consent, you can withdraw it at any time.</p>
+<p>We do not sell your information for money, and we do not build advertising profiles ourselves. The only information used for advertising is the Meta measurement data in section 2.8. Under some laws (for example, some US state privacy laws), sharing that data with an advertising platform can count as &ldquo;sharing&rdquo; for advertising. You can opt out at any time by turning off <span class="ui">SHARE AD MEASUREMENT DATA</span> in the game's Settings or by deleting your advertising ID.</p>
+<p>If you are in the European Economic Area or the United Kingdom: we provide the game to you under our Terms of Service (performance of a contract); we keep the game secure, moderate it and measure how it is used because we have a legitimate interest in running a safe, working game; we keep records the law requires us to keep, such as purchase records, to meet our legal obligations; we measure our advertising with Meta (section 2.8) because we have a legitimate interest in knowing whether our ads work, and you can object at any time by turning off <span class="ui">SHARE AD MEASUREMENT DATA</span> in the game's Settings; and where we rely on consent, you can withdraw it at any time.</p>
 
 <h2 id="see">4. Who can see your information</h2>
 <p><strong>Other players</strong> can see your public game identity: your display name, flag, Level, Glory (rounded), League, Alliance and role, number of cities, rankings, combat statistics and past Season results, your cities on the World map, and the chat messages you send to them or to a channel they can read. Alliance members can see roughly when you were last active (for example &ldquo;Online&rdquo; or &ldquo;3 hours ago&rdquo;). Other players <strong>cannot</strong> see your troop counts, Gold, Crowns, Gear, Runes, chests or other items, your private Marches or your private starter cities, unless the game rules reveal a specific detail (for example, a Scout report on one of your cities, or a battle report sent to both sides).</p>
@@ -123,6 +144,7 @@
   <li><strong>Other game notifications (Firebase Cloud Messaging, by Google):</strong> the game can also send optional reminders and game alerts, for example that your daily reward is ready, a reminder after you have been away for about a day, or an Alliance or Season event. For these, our server sends Google your push token and the short alert text only. They never include troop counts, your Gold or items, or any other private game data. You can turn each type off in the game's Settings.</li>
   <li><strong>Game engine:</strong> Unity Technologies, for the engine diagnostics described in section 2.4.</li>
 </ul>
+<p><strong>Meta (Android only):</strong> receives the advertising-measurement data described in section 2.8. Meta is an independent company and uses this data under the <a href="https://www.facebook.com/privacy/policy/" rel="noopener">Meta Privacy Policy</a> and its terms for businesses that use its tools.</p>
 <p><strong>App store:</strong> if you make a purchase, Google Play (or the store you installed the game from) handles the payment and your payment details as an independent company under its own terms and privacy policy, and tells our server about the purchase so we can verify and deliver it.</p>
 <p><strong>Legal reasons:</strong> we may disclose information if the law requires it, or to protect players, the game or others.</p>
 <p><strong>Transfer of the game:</strong> if the game moves to a new operator, your information may move with it, and this policy continues to apply until it is changed.</p>
@@ -146,6 +168,7 @@
 <tr><td data-label="Data">Translated copies of chat messages</td><td data-label="How long">Up to 90 days. Deleted sooner if the message is removed or its author deletes their account.</td></tr>
 <tr><td data-label="Data">Chat settings (chat language, Auto-Translate, profanity filter)</td><td data-label="How long">While your account exists. Deleted with your account.</td></tr>
 <tr><td data-label="Data">Server backups</td><td data-label="How long">Until the backup is deleted. There is no fixed schedule yet.</td></tr>
+<tr><td data-label="Data">Advertising-measurement data shared with Meta (Android, section 2.8)</td><td data-label="How long">Not stored by us. Meta keeps it under its own policy. Your <span class="ui">SHARE AD MEASUREMENT DATA</span> choice stays on your device until you change it, clear the app's data or uninstall the game.</td></tr>
 <tr><td data-label="Data">Server logs</td><td data-label="How long">A limited time, until the logs rotate and are overwritten.</td></tr>
 </tbody>
 </table></div>
@@ -177,6 +200,7 @@
 <h2 id="rights">8. Your choices and rights</h2>
 <ul>
   <li>Change your display name in your Profile. Choose your chat language and turn Auto-Translate and the profanity filter on or off in <span class="ui">Settings</span>. Mute or block players, and report abusive messages or names.</li>
+  <li>On Android, stop sharing advertising-measurement data with Meta at any time with <span class="ui">Settings</span> &rsaquo; <span class="ui">LEGAL &amp; ABOUT</span> &rsaquo; <span class="ui">SHARE AD MEASUREMENT DATA</span>, and reset or delete your advertising ID in your device settings (section 2.8).</li>
   <li>Turn notifications off at any time in your device's notification settings for the game, or by not allowing them when the game asks. Reminders and game alerts can also be turned off one type at a time in the game's Settings.</li>
   <li>Delete your account at any time (section 6).</li>
   <li>Depending on where you live, you may have the right to access, correct, delete or receive a copy of your personal data, to object to or restrict some uses, and to complain to your local data-protection authority. To make a request, email <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20privacy%20request">reignofrivals@gmail.com</a> with your exact player name. We may ask for details that help us confirm the account is yours.</li>
@@ -186,10 +210,10 @@
 <p>Reign of Rivals is intended for users age <strong>14 and older</strong> and is not directed at children. You must be at least 14 to play (see our <a href="terms">Terms of Service</a>). We do not knowingly collect personal information from anyone under 14. If you believe a child under 14 has created an account, email <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20child%20account">reignofrivals@gmail.com</a> and we will delete it.</p>
 
 <h2 id="international">10. International users</h2>
-<p>Our game server is hosted in a data centre that may be outside your country, and Google Cloud Translation and Firebase Cloud Messaging (when used) may process data in other countries. By using the game, your information may be processed outside your country, with the protections described in this policy.</p>
+<p>Our game server is hosted in a data centre that may be outside your country, and Google Cloud Translation, Firebase Cloud Messaging and, on Android, Meta (when used) may process data in other countries, including the United States. By using the game, your information may be processed outside your country, with the protections described in this policy.</p>
 
 <h2 id="changes">11. Changes to this policy</h2>
-<p>We may update this policy as the game changes (for example, if we change how purchases work or notifications work, or add new sign-in methods). We will change the &ldquo;Last updated&rdquo; date above and, for important changes, tell players in the game.</p>
+<p>We may update this policy as the game changes (for example, if we change how purchases, notifications or advertising measurement work, or add new sign-in methods). We will change the &ldquo;Last updated&rdquo; date above and, for important changes, tell players in the game.</p>
 
 <h2 id="contact">12. Contact</h2>
 <p>Reign of Rivals<br>Email: <a class="mail" href="mailto:reignofrivals@gmail.com?subject=Reign%20of%20Rivals%20privacy">reignofrivals@gmail.com</a></p>
