@@ -41,7 +41,7 @@
 <div class="page-head">
   <div class="wrap narrow">
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: <time datetime="2026-11-08">8 November 2026</time></p>
+    <p class="meta">Last updated: <time datetime="2026-11-11">11 November 2026</time></p>
   </div>
 </div>
 <div class="wrap narrow">
@@ -70,7 +70,8 @@
   <li><strong>Display name.</strong> New players get a generated name such as <code>Guest-1a2b3c4d5e</code>. You can change it in your Profile. We keep a record of each name change (old name, new name, time) to process renames and to remove all your names if you delete your account.</li>
   <li><strong>Player flag.</strong> The emblem you design from the game's built-in patterns, colours and symbols.</li>
   <li><strong>Terms acceptance.</strong> The version of our Terms of Service you accepted and when. We need this before you can use chat and other social features.</li>
-  <li><strong>Sign-in sessions.</strong> A hashed (scrambled) copy of your sign-in token, the platform name your device reports (for example &ldquo;Android&rdquo; or &ldquo;IPhonePlayer&rdquo;), and timestamps. This is not a device identifier.</li>
+  <li><strong>Sign-in sessions.</strong> A hashed (scrambled) copy of your sign-in token, the platform name your device reports (for example &ldquo;Android&rdquo; or &ldquo;IPhonePlayer&rdquo;), and timestamps.</li>
+  <li><strong>Device link (game version 1.14 and later).</strong> The game creates a random ID for its installation on your device (on iPhone, Apple's &ldquo;identifier for vendor&rdquo;, which is the same for all of our apps on that iPhone and is not the advertising ID). Our server never stores this ID itself: it stores only a keyed, one-way scrambled (hashed) copy, linked to your account, with the time it was first and last seen. We use it to bring your kingdom back if you reinstall the game on the same device, to allow one new guest account per device, and to detect accounts used together for cheating or farming (for example, several accounts signing in from the same device). Our staff can see that accounts share a device, but never the ID itself.</li>
   <li><strong>Push notification token (only if you allow notifications).</strong> If you allow notifications, the game receives a push token for your device: from Google's Firebase Cloud Messaging on Android, or from Apple Push Notification service (APNs) on iPhone. We store it with your account, the platform name and your game language (so alerts are written in your language). We use it only to send you the game's notifications: warnings about incoming Attacks and the optional reminders and game alerts described in section 4.</li>
   <li><strong>Restore codes.</strong> If you lose access to your device, our support team can issue a one-time restore code. We store only a hashed copy. It expires after 15 minutes and can be used once.</li>
   <li><strong>Transfer codes.</strong> Before you change phones, you can make a one-time transfer code yourself in <span class="ui">Settings</span> &rsaquo; <span class="ui">MANAGE ACCOUNT</span> &rsaquo; <span class="ui">GET TRANSFER CODE</span>. It works on Android and iPhone. We store only a hashed copy and when it was made; we do not store your IP address with it. A transfer code expires after 24 hours, can be used once, and replaces any earlier unused code.</li>
@@ -78,7 +79,7 @@
 </ul>
 <h3>2.2 Game data</h3>
 <p>Everything that makes up your kingdom and its history, for example: your cities, troops, Gold, Crowns, Gear, Runes, chests and other items; your Level, stats, quests and rewards; Marches, battles and Scout reports; Season, League and ranking results; Alliance membership and role; friends and friend requests; your mute and block lists; and when you were last active.</p>
-<p><strong>Invites (Invite a Friend).</strong> Your personal invite code. If you enter a friend's code, we record which account invited yours, when, which code was used, the invite status (pending, completed or cancelled), the number of different days you have played, and which rewards were sent. If someone enters your code, we keep the same record on their side. We use this to check the invite milestone, send rewards once, apply the invite limits and stop abuse. We do <strong>not</strong> collect your contacts, and we do not store IP addresses or device identifiers for invites.</p>
+<p><strong>Invites (Invite a Friend).</strong> Your personal invite code. If you enter a friend's code, we record which account invited yours, when, which code was used, the invite status (pending, completed or cancelled), the number of different days you have played, and which rewards were sent. If someone enters your code, we keep the same record on their side. We use this to check the invite milestone, send rewards once, apply the invite limits and stop abuse. We do <strong>not</strong> collect your contacts, and we do not store IP addresses for invites; the device link (section 2.1) can be used to detect invites between accounts on the same device.</p>
 <h3>2.3 Messages and other things you write</h3>
 <ul>
   <li><strong>Chat.</strong> Messages you send in Global chat (visible to players in your World), Alliance chat (visible to your Alliance's members), and private messages (only between two players who are friends). Messages are plain text. Some offensive words are automatically replaced with asterisks when you post; the masked version is what we store.</li>
@@ -175,6 +176,7 @@
 <tr><td data-label="Data">Invite records</td><td data-label="How long">While either account in the invite exists, so we can apply the per-player limits and stop repeat abuse. If you delete your account, a pending invite is cancelled; in a completed invite your name is replaced with &ldquo;Deleted Player&rdquo;.</td></tr>
 <tr><td data-label="Data">Gameplay analytics</td><td data-label="How long">90 days.</td></tr>
 <tr><td data-label="Data">Onboarding diagnostics (first day after sign-up)</td><td data-label="How long">30 days. Deleted sooner if you delete your account.</td></tr>
+<tr><td data-label="Data">Device link (hashed device ID, first and last seen)</td><td data-label="How long">While your account exists, and <strong>kept after you delete your account</strong>, without your name, so we can recognise devices used for cheating or farming. The hashed ID cannot be turned back into your device&rsquo;s ID.</td></tr>
 <tr><td data-label="Data">Push notification tokens</td><td data-label="How long">While your account exists. Deleted sooner if Google or Apple reports the token is no longer valid (for example, after you uninstall the game), and deleted with your account.</td></tr>
 <tr><td data-label="Data">Records of attack notifications we sent (which Attack and city, when, and whether delivery worked)</td><td data-label="How long">About 7 days after the notification is finished (delivered, or expired when the Attack arrives).</td></tr>
 <tr><td data-label="Data">Expired sign-in sessions</td><td data-label="How long">About 30 days after they expire.</td></tr>
